@@ -1,0 +1,7 @@
+---
+mysql_root_password: "mrjokerb"
+app_user: "rafael"
+http_host: "www.ipadilla.com"
+http_conf: "www.ipadilla.com.conf"
+http_port: "80"
+disable_default: true

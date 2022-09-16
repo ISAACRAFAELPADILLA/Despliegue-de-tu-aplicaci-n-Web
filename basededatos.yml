@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  
+  tasks:
+    - name: create a new database
+      mysql_db: name=registro state=present login_user=root login_password="mrjokerb"
+    - name: add sample data to database
+      copy: src=recursosweb/registro.sql dest=/tmp/registro.sql
+    - name: insert sample data into database
+      mysql_db: name=registro state=import target=/tmp/registro.sql login_password="mrjokerb"
